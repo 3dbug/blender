@@ -6,9 +6,10 @@ bl_info = {
     "location": "3DView > Add > Curve > Dial and Scale",
     "description": "Add an array of text number objects or watch dials.",
     "warning": "",
-    "wiki_url": "https://github.com/sambler/myblendercontrib/blob/master/numberArray.py",
-    "tracker_url": "https://github.com/sambler/myblendercontrib/issues",
+    "wiki_url": "https://github.com/3dbug/blender/blob/master/DialScale.py",
+    "tracker_url": "https://github.com/3dbug/blender/issues",
     "category": "Add Curve"}
+
 import bpy,math
 import mathutils
 
@@ -16,7 +17,7 @@ from bpy.props import IntProperty,FloatProperty,StringProperty,EnumProperty,Bool
 
 class DialScale(bpy.types.Operator):
     """ Creates an array of text elements"""
-    bl_idname = "mesh.primitive_dial_scale"
+    bl_idname = "curve.dial_scale"
     bl_label = "Create Dials and Scales"
     bl_options = {'REGISTER', 'UNDO'}
 
