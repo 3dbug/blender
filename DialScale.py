@@ -46,6 +46,11 @@ class DialScale(bpy.types.Operator):
         pos = self.start
         num = self.start
         end = self.count + self.start
+        if len(bpy.data.fonts) == 0:
+            # if no fonts exist we add and delete a text object to initiate it
+            bpy.ops.object.text_add()
+            context.scene.objects.unlink(bpy.data.objects['Text'])
+            bpy.data.objects.remove(bpy.data.objects['Text'])
         font_obj = bpy.data.fonts[ self.font ]
         bpy.context.space_data.pivot_point = 'ACTIVE_ELEMENT'
     
