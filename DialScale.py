@@ -44,9 +44,9 @@ class DialScale(bpy.types.Operator):
     font = EnumProperty( name="Fonts",items=getFonts)
 
     def execute(self, context):
-        x = - self.offset
+        x = -self.offset
         y = 0.0
-        angle = math.radians( self.rotate ) + math.pi/2.0
+        angle = math.radians( self.rotate ) + math.pi/2
         angle_step = math.radians( self.segment ) / self.count
         angle = angle - angle_step
         pos = self.start - 1
