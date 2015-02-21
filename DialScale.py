@@ -1,6 +1,6 @@
 bl_info = {
     "name": "Dial and Scale",
-    "author": "stacker",
+    "author": "stacker, sambler",
     "version": (1, 1),
     "blender": (2, 70, 0),
     "location": "3DView > Add > Curve > Dial and Scale",
