@@ -79,11 +79,11 @@ class DialScale(bpy.types.Operator):
                     tpos = vec3d * mathutils.Matrix.Rotation( -(angle + (t*tick_step)) , 3, 'Z')
                     bpy.ops.transform.resize(value=(6,1,1))
                     bpy.ops.transform.rotate(value= angle + t*tick_step, axis=(0, 0, 1))
-                elif self.dialType == "horizontal":
+                elif self.dialType == "horizontal" and pos < end-1:
                     tick_step = self.offset / self.ticks
                     tpos=(x+t*tick_step,self.tickOffset,0)
                     bpy.ops.transform.resize(value=(1,6,1))
-                else:
+                elif pos < end -1:
                     tick_step = self.offset / self.ticks
                     tpos=(self.tickOffset,y+t*tick_step,0)
                     bpy.ops.transform.resize(value=(6,1,1))
@@ -107,3 +107,4 @@ def unregister():
 
 if __name__ == "__main__":
     register()
+    
