@@ -124,9 +124,7 @@ public class PrimeNumberStar extends JFrame {
                 if ( !onlyPrimes || primes[i] ) {
                     int x = (int) ( Width / 2.0 + ( Math.cos( angle ) * radius ) );
                     int y = (int) ( Height / 2.0 + ( Math.sin( angle ) * radius ) );
-                    if (y <0 ) {
-                    	y = -y;
-                    }
+
                     g.setColor( primes[i] ? Color.white : Color.orange );
                     g.drawLine( x, Height - y, x, Height - y );
                     if ( printAngles && primes[i] && radius > 200 && radius < 215 ) {
